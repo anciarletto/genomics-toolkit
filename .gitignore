@@ -208,7 +208,6 @@ __marimo__/
 
 # raw sequencing data
 fastq/
-raw_data/
 alignments/
 counts/
 
