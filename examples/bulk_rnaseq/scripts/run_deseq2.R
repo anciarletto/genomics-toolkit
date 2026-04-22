@@ -215,6 +215,9 @@ write.csv(
 top10 <- head(fgsea_res, 10)
 
 png(file.path(output_dir, "gsea/fgsea_top10_barplot.png"), width = 900, height = 600)
+
+par(mar = c(5, 14, 4, 2))  # <-- FIX: more space for labels
+
 barplot(
   rev(top10$NES),
   names.arg = rev(top10$pathway),
@@ -223,16 +226,7 @@ barplot(
   col = ifelse(rev(top10$NES) > 0, "steelblue", "tomato"),
   main = "Top FGSEA Pathways (NES)"
 )
+
 dev.off()
-
-top3 <- head(fgsea_res$pathway, 3)
-
-for (p in top3) {
-  png(file.path(output_dir, paste0("gsea/enrichment_", p, ".png")),
-      width = 800, height = 600)
-
-  print(plotEnrichment(pathways[[p]], gene_list) + ggtitle(p))
-  dev.off()
-}
 
 cat("\nAnalysis complete. Results in:", output_dir, "\n")
