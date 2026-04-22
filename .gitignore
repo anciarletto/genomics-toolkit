@@ -206,34 +206,27 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# RAW DATA
-raw_data/fastq/
-*.fastq
-*.fastq.gz
-
-# REFERENCE
-*.ht2
-*.tar.gz
-
-# ALIGNMENTS
+# raw sequencing data
+fastq/
+raw_data/
 alignments/
-*.bam
-*.sam
-*.bai
+counts/
 
-# SRA / CACHE
-raw_data/sra_cache/
-ncbi/
-**/ncbi/
-
-# QC OUTPUTS
+# results
+deseq2_results/
+results/
 fastqc_reports/
 multiqc_reports/
 
-# ANALYSIS OUTPUTS
-deseq2_results/
-counts/
-temp/
+# large binaries
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+
+# HISAT2 index
+*.ht2
+reference/grch38/
 
 # LOGS
 *.log
