@@ -211,6 +211,10 @@ raw_data/fastq/
 *.fastq
 *.fastq.gz
 
+# REFERENCE
+*.ht2
+*.tar.gz
+
 # ALIGNMENTS
 alignments/
 *.bam
