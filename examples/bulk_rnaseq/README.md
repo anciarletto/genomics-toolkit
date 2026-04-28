@@ -68,7 +68,7 @@ GSEA
 Run the pipeline step by step:
 
 ### 1. Download FASTQ files and Metadata
-./scripts/download_fastq.sh
+./scripts/download_fastq.sh  
 ./scripts/get_metadata.R
 
 ### 2. Quality control
